@@ -3,52 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ecoblonic</title>
-
-  <!-- Importar fuente Anton para el título -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
-
-  <!-- Enlazar CSS compilado desde SCSS -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Logo ECOBLONIC</title>
+  <!-- Carga el CSS del logo -->
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Redirigir a la web principal después de 3.5 segundos
+    setTimeout(() => {
+      window.location.href = '../index.html'; // Ajusta esta ruta si es necesario
+    }, 3500);
+  </script>
 </head>
 <body>
-  <div id="app">
-    <div :class="['bg', bg]">
-      <header>
-        <nav>
-          <ul>
-            <li><a class="link-bio" href="#bio" @click="bg = 'bio'">Sobre Ecoblonic</a></li>
-            <li><a class="link-projects" href="#projects" @click="bg = 'projects'">Nuestros Productos</a></li>
-            <li><a class="link-find-me" href="#findme" @click="bg = 'find-me'">Contacto</a></li>
-          </ul>
-        </nav>
-        <div class="transition transition-bio"></div>
-        <div class="transition transition-projects"></div>
-        <div class="transition transition-find-me"></div>
-        <h1>Ecoblonic</h1>
-      </header>
-      <div class="dots dots1"></div>
-      <div class="dots dots2"></div>
-      <main>
-        <transition name="slide-fade" mode="out-in">
-          <p key="bio" v-if="bg==='bio'">
-            Ecoblonic es una iniciativa innovadora que fabrica bloques de construcción ecológicos utilizando plástico reciclado, promoviendo la sostenibilidad y la economía circular en la industria de la construcción.
-          </p>
-          <p key="projects" v-if="bg==='projects'">
-            Nuestros productos incluyen bloques ecológicos resistentes y duraderos, diseñados para ofrecer una alternativa sostenible y eficiente para la construcción moderna.
-          </p>
-          <p key="find-me" v-if="bg==='find-me'">
-            Para más información o consultas, contáctanos en <a href="mailto:info@ecoblonic.com" target="_blank" rel="noopener">info@ecoblonic.com</a> o visita nuestra página web en <a href="https://ecoblonic.com" target="_blank" rel="noopener">ecoblonic.com</a>.
-          </p>
-        </transition>
-      </main>
+  <div class="container">
+    <div class="title">
+      <h1>ECOBLONIC</h1>
+    </div>
+    <div class="ghost">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
-
-  <!-- Vue.js (asegúrate de incluir la librería Vue) -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
-  <!-- Tu script JS -->
-  <script src="js/app.js"></script>
 </body>
 </html>
